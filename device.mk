@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/xiaomi/onclite/onclite-vendor.mk)
+$(call inherit-product, vendor/asus/X01A_1/X01A_1-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -158,8 +158,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.9
 
 # Doze mode
-PRODUCT_PACKAGES += \
-    XiaomiDoze
+#PRODUCT_PACKAGES += \
+#    XiaomiDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -242,7 +242,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.onclite
+    android.hardware.light@2.0-service.X01A_1
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -300,7 +300,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.msm.usb.configfs.rc \
-    init.onclite.rc \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.usb.rc \

@@ -18,8 +18,8 @@
 
 set -e
 
-DEVICE=onclite
-VENDOR=xiaomi
+DEVICE=X01A_1
+VENDOR=asus
 
 INITIAL_COPYRIGHT_YEAR=2019
 
