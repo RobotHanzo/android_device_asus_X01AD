@@ -153,8 +153,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/adsprpc-smd-secure   0644   system     system
 /dev/system_health_monitor 0644  radio      system
 /dev/mdss_rotator         0664   system     system
-#for ir
-/dev/spidev6.1            0660   system    system
 
 #QDSS
 /dev/byte-cntr            0660   system    oem_2902
@@ -175,7 +173,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/queues/rx-* rps_cpus           0660   system     system
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net/p2p0/queues/rx-* rps_cpus            0660   system     system
 /dev/spidev0.0            0660   system     audio
-/dev/i2c-7                0660   system     audio
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera
 /dev/mercury0             0660   system     camera
@@ -275,22 +272,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/devices/platform/soc/a84000.i2c/i2c-2/2-0020/input/input*  secure_touch          0440 system drmrpc
 /sys/devices/platform/soc/a84000.i2c/i2c-2/2-0020/input/input*  secure_touch_enable   0660 system drmrpc
 
-# native sensors input
-/sys/devices/virtual/input/input*   enable_int       0660  system   input
-/sys/devices/virtual/input/input*   gyro_op_mode     0660  system   input
-/sys/devices/virtual/input/input*   acc_range        0660  system   input
-/sys/devices/virtual/input/input*   acc_value        0660  system   input
-/sys/devices/virtual/input/input*   gyro_odr         0660  system   input
-/sys/devices/virtual/input/input*   fifo_data_sel    0660  system   input
-/sys/devices/virtual/input/input*   fifo_watermark   0660  system   input
-/sys/devices/virtual/input/input*   enable           0660  system   input
-/sys/devices/virtual/input/input*   acc_odr          0660  system   input
-/sys/devices/virtual/input/input*   temperature      0660  system   input
-/sys/devices/virtual/input/input*   acc_op_mode      0660  system   input
-/sys/devices/virtual/input/input*   fifo_bytecount   0660  system   input
-/sys/devices/virtual/input/input*   gyro_range       0660  system   input
-/sys/devices/virtual/input/input*   gyro_value       0660  system   input
-
 # GNSS PPS Device premissions
 /dev/pps*                  0660   gps     gps
 /dev/gnss_sirf             0660   gps     gps
@@ -317,7 +298,11 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/bus/pci/drivers/wil6210* 0000:01:00.0/net/wigig0/queues/rx-0/rps_cpus 0660 system system
 /sys/bus/pci/drivers/wil6210* 0000:01:00.0/net/wigig0/gro_flush_timeout 0660 system system
 /sys/devices/virtual/net/bond0 queues/rx-0/rps_cpus 0660 system system
-/dev/wigig_sensing        0660   system     system
+
+#nfc permissions
+/dev/nfc-nci              0660    nfc         nfc
+/dev/nq-nci               0660    nfc         nfc
+/dev/assd                 0660    nfc         nfc
 
 # UIO devices
 /dev/uio0                 0660   system     system
@@ -380,6 +365,8 @@ firmware_directories /vendor/firmware_mnt/image/
 
 #Memory Offline
 /sys/devices/system/memory/memory* state    0660 system system
+
+/sys/devices/virtual/hdcp/msm_hdcp  min_level_change 0664    system  graphics
 
 # sys-fs display
 /sys/class/graphics/fb*     hpd                      0664    system  graphics
