@@ -153,6 +153,11 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
+# FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
+    
 # GPS
 PRODUCT_PACKAGES += \
     libjson
