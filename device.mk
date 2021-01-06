@@ -149,6 +149,8 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@1.0-impl \
+    android.hardware.broadcastradio@1.0-service \
     FM2 \
     libqcomfm_jni \
     init.qti.fm.sh \
