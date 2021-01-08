@@ -16,7 +16,7 @@ $(call inherit-product, device/asus/X01AD/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_X01AD
+PRODUCT_NAME := rr_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := X01AD
